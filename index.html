@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PacMen Exercise</title>
+    <style>
+      button {
+        font-size: 20px;
+        position: absolute;
+        z-index: 1;
+        top: 2%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: linear-gradient(
+          to bottom,
+          rgb(235, 74, 119),
+          rgb(176, 4, 52)
+        );
+        color: whitesmoke;
+        border-radius: 5px;
+        padding: 5px;
+        transition-duration: ease 0.5s;
+        box-shadow: 2px 2px 4px #000;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+
+      button:active {
+        box-shadow: none;
+        background: linear-gradient(to top, rgb(176, 4, 52), rgb(235, 74, 119));
+        transition: ease 0.5s;
+      }
+
+      button:disabled {
+        background: #6c6b6b;
+        color: #999999;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0">
+    <div id="game" style="width: 100vw; height: 100vh; overflow: hidden">
+      <button onclick="makeOne()" width="200" height="30" style="left: 10px">
+        Add PacMan
+      </button>
+      <button
+        id="start"
+        onclick="update(); disableButton();"
+        width="200"
+        height="30"
+        style="left: 150px"
+      >
+        Start Game
+      </button>
+    </div>
+  </body>
+  <script src="pacmen.js"></script>
+</html>
